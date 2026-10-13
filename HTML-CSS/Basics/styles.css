@@ -1,0 +1,13 @@
+body{
+    background: lightblue;
+    color: black; 
+}
+
+#first-div {
+    background-color: lightpink;
+}
+
+.info{
+    color: red; 
+    font-size: 1rem;
+}

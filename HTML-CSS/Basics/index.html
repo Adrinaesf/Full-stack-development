@@ -1,0 +1,132 @@
+
+<!--
+    1. Doctype: This is a html file
+    2. html tag: making the html feture of our file
+    3. we have 2 childern: head, body
+    4. head: Invisible informations
+    5. body: visulize shapes and tags
+    6. subtags: 
+        1. header: the h1 part
+            - nav: will have number of links to different
+            parts of website
+            - Ex: footer
+            - How to do it?
+                1. We make a <a> tag and pass in the name using <p>
+                2. We do <a href="#name"> to set a starting point
+                3. we go to name tag and link it using "id" attribute. 
+
+        2. main: everything else in main
+        3. footer: footer of page. 
+
+    7. style attributes
+    8. Connecting a css file and html file. 
+        1. link the files
+        2. we go to head and we make <link rel href/>
+        3. rel = stylesheet for css, href = name of css file
+
+    9. Targeting elements: 
+        1. target the tag directly: use <body> in css which does it for all the parts
+        2. use id: #id-name{} in css
+        3. use class: a class name can be used on multiple elements 
+        across a page, while an id must be completely unique 
+        and applied to only one single element per page.
+        Basically you cna call class with teh same name of class in to 
+        different tags, but id is only for that value. 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Galore</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1> Cats Website </h1>
+        <nav style="color: blue; background: yellow;">
+            
+            <a href="#footer">
+                <p>Footer</p>
+            </a>
+
+            <a href="#cat-breed">
+                <p>Cat Breed Input</p>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2> Everything you should know about cats! </h2>
+
+            <p class="paragraph info"> Cats are one my favourite animals, 
+                they are fun, unperdicatable creatures. 
+                That's why I love them lol. 
+            </p>
+        </section>
+        <section> 
+            <div id="first-div">
+                <!-- 
+                    Image tag, with properties of src="url", 
+                    and alt which is used to specify alternative text 
+                    for an image when that image cannot be displayed 
+                -->
+                <img 
+                    src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg?w=1200"
+                    alt="cat-profile-image"
+                    style="width: 100%"
+                />
+
+                <!-- 
+                    anchoor tag: Making hyper links to other pages. 
+                    href = the link we wnat to move
+                    target = "_blank" which is opening the link in a new tab
+
+                -->
+                <a
+                    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKz45sw1PKqaJ7RrtLLnkk-q-q5QZ4m_OuGnANo9IWGQ&s=10"
+                    target="_blank"
+                > 
+                    <p> Click here to go to another image cat. </p>
+                </a>
+            </div>
+            
+            <!-- 
+                label comes with the input tag, and it gives a description
+                before the input
+            -->
+            
+            <form id="cat-breed"> 
+                <label>
+                    Cat breed:
+                    <input style="width: 150px;" placeholder="Enter cat breed">
+                </label>
+
+                <button>
+                    <p> Subimt </p>
+                </button>
+            </form>
+
+            <!--
+                Container tags: withought them everything is vertical. 
+                containers are there to group our elements. 
+                1. div ->  use <div> strictly for layout, styling, 
+                or scripting purposes without adding semantic meaning.
+                2. form -> wraps sections of user input and containing information. 
+                3. section -> Use <section> when the content is 
+                thematically related and belongs in a document outline,
+            -->
+            </section>
+    </main>
+    <footer id="footer">
+        Copyright 2026
+    </footer>
+</body>
+
+</html>
+
+
+
